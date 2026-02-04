@@ -1,0 +1,67 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 04-02-2026 a las 19:58:48
+-- Versión del servidor: 10.4.32-MariaDB
+-- Versión de PHP: 8.0.30
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Base de datos: `cine`
+--
+CREATE DATABASE IF NOT EXISTS `cine` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `cine`;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `pelicula`
+--
+
+CREATE TABLE `pelicula` (
+  `id_pelicula` int(11) NOT NULL,
+  `titulo` varchar(80) NOT NULL,
+  `anio_estreno` int(4) NOT NULL,
+  `duracion` varchar(10) NOT NULL,
+  `precio` decimal(4,2) NOT NULL,
+  `sinopsis` text NOT NULL,
+  `url_imagen` varchar(255) NOT NULL,
+  `entradas` int(4) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `pelicula`
+--
+
+INSERT INTO `pelicula` (`id_pelicula`, `titulo`, `anio_estreno`, `duracion`, `precio`, `sinopsis`, `url_imagen`, `entradas`) VALUES
+(1, 'INTERESTELAR', 2014, '2h 49m', 10.99, 'Sigue a un grupo de astronautas que, en un futuro distópico donde la Tierra se vuelve inhabitable por plagas y polvo, viajan a través de un agujero de gusano cerca de Saturno para encontrar un nuevo hogar para la humanidad. El piloto Cooper lidera esta misión épica y arriesgada, enfrentando dilemas temporales y espaciales mientras intenta salvar a la raza humana.', 'https://i.redd.it/fui-assistir-interestelar-pela-primeira-vez-no-reprise-de-v0-g2p75retb9de1.jpg?width=683&format=pjpg&auto=webp&s=eccbd25ffb3e516f5b749d09ddd7c635367dff8b', 77),
+(2, 'PRIMATE', 2026, '1h 29m', 12.99, 'Tras regresar de la universidad, Lucy se reúne con su familia, incluido el chimpancé Ben. Pero el simio contrae la rabia durante una fiesta en la piscina y se vuelve muy agresivo. Lucy y sus amigos se atrincheran en la piscina e idean formas de sobrevivir a los ataques del feroz chimpancé.', 'https://www.moviementarios.com/wp-content/uploads/2025/09/primate-poster.jpg', 80),
+(3, 'The velocipastor', 2018, '1h 15m', 4.99, 'Después de perder a sus padres, un sacerdote viaja a China, donde hereda una misteriosa habilidad que le permite convertirse en un dinosaurio. Una prostituta le convence para usar este poder para luchar contra el crimen, y ninjas.', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfucoolW9BhrZDYGdbeY__x3qLqyYwucX5og&s', 57),
+(4, 'El niño con el pijama de rayas', 2008, '1h 34m', 7.99, 'Berlín, 1942. Bruno (Asa Butterfield) tiene ocho años y desconoce el significado de la Solución Final y del Holocausto. No es consciente de las pavorosas crueldades que su país, en plena guerra mundial, está infligiendo a los pueblos de Europa. Todo lo que sabe es que su padre -recién nombrado comandante de un campo de concentración- ha ascendido en el escalafón, y que ha pasado de vivir en una confortable casa de Berlín a una zona aislada. Todo cambia cuando conoce a Shmuel, un niño judío que vive una extraña existencia paralela al otro lado de la alambrada.', 'https://www.aceprensa.com/wp-content/uploads/2008/09/14574-0.jpg', 107),
+(5, 'El peor vecino del mundo', 2022, '2h 6m', 12.99, 'Otto Anderson (Tom Hanks) es un viudo cascarrabias y muy obstinado. Cuando una alegre joven familia se muda a la casa de al lado, Otto encuentra la horma de su zapato en la espabilada, y muy embarazada, Marisol, con la que entablará una muy improbable amistad que pondrá su mundo patas arriba...', 'https://lh3.googleusercontent.com/pw/AIL4fc84M7qI0DL8mHlw64cePcD4UXzoOYAxbp5rJzg-mk6-U1fnE7H3Rj_pKoHhishUjsAXagf4vNt217BLB1ZPgKpyibLZBP5P_NH9EeXSD7S8vtkIo5x4=w2400', 131);
+
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `pelicula`
+--
+ALTER TABLE `pelicula`
+  ADD PRIMARY KEY (`id_pelicula`);
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
